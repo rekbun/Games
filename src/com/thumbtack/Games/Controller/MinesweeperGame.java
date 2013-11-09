@@ -1,4 +1,4 @@
-package com.thumbtack.Games;
+package com.thumbtack.Games.Controller;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
+import com.thumbtack.Games.View.Brick;
+import com.thumbtack.Games.R;
 
 import java.util.Random;
 
@@ -24,7 +26,7 @@ public class MinesweeperGame extends Activity {
 
 	private TableLayout mineField;
 
-	Block[][] blocks;
+	Brick[][] bricks;
 	private int blockDimension=40;
 	private int blockPadding=2;
 
@@ -74,10 +76,10 @@ public class MinesweeperGame extends Activity {
 			tableRow.setLayoutParams(new TableRow.LayoutParams((blockDimension+2*blockPadding)*
 					numberOfColumnsInMineField ,blockDimension+2*blockPadding));
 			for(int col=1;col<numberOfColumnsInMineField+1;col++) {
-				blocks[row][col].setLayoutParams(new TableRow.LayoutParams(
+				bricks[row][col].setLayoutParams(new TableRow.LayoutParams(
 						blockDimension + 2 * blockPadding, blockDimension + 2 * blockPadding));
-				blocks[row][col].setPadding(blockPadding,blockPadding,blockPadding,blockPadding);
-				tableRow.addView(blocks[row][col]);
+				bricks[row][col].setPadding(blockPadding,blockPadding,blockPadding,blockPadding);
+				tableRow.addView(bricks[row][col]);
 			}
 			mineField.addView(tableRow,new TableLayout.LayoutParams(
 					(blockDimension+2*blockPadding)*numberOfColumnsInMineField,blockDimension+2*blockPadding));
@@ -97,15 +99,15 @@ public class MinesweeperGame extends Activity {
 	}
 
 	private void createMineField() {
-		blocks =new Block[numberOfRowsInMineField+2][numberOfColumnsInMineField+2];
+		bricks =new Brick[numberOfRowsInMineField+2][numberOfColumnsInMineField+2];
 		for(int row=0;row<numberOfRowsInMineField+2;row++) {
 			for(int col=0;col<numberOfColumnsInMineField+2;col++) {
-				blocks[row][col]=new Block(this);
-				blocks[row][col].initialize();
+				bricks[row][col]=new Brick(this);
+				bricks[row][col].initialize();
 
 				final int finalRow=row;
 				final int finalCol=col;
-				blocks[row][col].setOnClickListener(new View.OnClickListener() {
+				bricks[row][col].setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View v) {
 						if(!isTimerStarted) {
@@ -120,7 +122,7 @@ public class MinesweeperGame extends Activity {
 
 						rippleUncover(finalRow,finalCol);
 
-						if(blocks[finalRow][finalCol].hasMine()) {
+						if(bricks[finalRow][finalCol].hasMine()) {
 							finishGame(finalRow,finalCol);
 						}
 						if(checkGameWin()) {
@@ -141,9 +143,9 @@ public class MinesweeperGame extends Activity {
 		updateMineCountDisplay();
 		for(int row=1;row<numberOfRowsInMineField+1;row++) {
 			for(int col=1;col<numberOfColumnsInMineField+1;col++) {
-				blocks[row][col].setClickable(false);
-				if(blocks[row][col].hasMine()) {
-					blocks[row][col].setBlockAsDisabled(false);
+				bricks[row][col].setClickable(false);
+				if(bricks[row][col].hasMine()) {
+					bricks[row][col].setBlockAsDisabled(false);
 				}
 			}
 		}
@@ -153,7 +155,7 @@ public class MinesweeperGame extends Activity {
 	private boolean checkGameWin() {
 		for(int row=1;row<numberOfRowsInMineField+1;row++) {
 			for(int col=1;col<numberOfColumnsInMineField+1;col++) {
-				if(!blocks[row][col].hasMine()&& blocks[row][col].isCovered()) {
+				if(!bricks[row][col].hasMine()&& bricks[row][col].isCovered()) {
 					return false;
 				}
 			}
@@ -185,13 +187,13 @@ public class MinesweeperGame extends Activity {
 		btnSmile.setBackgroundResource(R.drawable.sad);
 		for(int row=1;row<numberOfRowsInMineField+1;row++) {
 			for(int col=1;col<numberOfColumnsInMineField+1;col++) {
-				blocks[row][col].setBlockAsDisabled(false);
-				if(blocks[row][col].hasMine()) {
-					blocks[row][col].setMineIcon(false);
+				bricks[row][col].setBlockAsDisabled(false);
+				if(bricks[row][col].hasMine()) {
+					bricks[row][col].setMineIcon(false);
 				}
 			}
 		}
-		blocks[curRow][curCol].triggerMine();
+		bricks[curRow][curCol].triggerMine();
 		showMessage("time: "+secondsPassed);
 	}
 
@@ -202,10 +204,10 @@ public class MinesweeperGame extends Activity {
 			mineRow=rand.nextInt(numberOfColumnsInMineField);
 			mineCol=rand.nextInt(numberOfRowsInMineField);
 			if((mineRow+1!=curCol)||(mineCol+1!=curRow)) {
-				if(blocks[mineCol+1][mineRow+1].hasMine()) {
+				if(bricks[mineCol+1][mineRow+1].hasMine()) {
 					row--;
 				}
-				blocks[mineCol+1][mineRow+1].plantMine();
+				bricks[mineCol+1][mineRow+1].plantMine();
 			}else {
 				row--;
 			}
@@ -218,31 +220,31 @@ public class MinesweeperGame extends Activity {
 				if((row!=0)&&((row!=numberOfRowsInMineField+1)&&(col!=0 && (col!=numberOfColumnsInMineField+1)))) {
 					for(int prevRow=-1;prevRow<2;prevRow++) {
 						for(int prevCol=-1;prevCol<2;prevCol++) {
-							if(blocks[row+prevRow][col+prevCol].hasMine()) {
+							if(bricks[row+prevRow][col+prevCol].hasMine()) {
 								nearByMineCount++;
 							}
 						}
 					}
-					blocks[row][col].setNumberOfMinesInSurrounding(nearByMineCount);
+					bricks[row][col].setNumberOfMinesInSurrounding(nearByMineCount);
 				}else {
-					blocks[row][col].setNumberOfMinesInSurrounding(8);
-					blocks[row][col].openBlock();
+					bricks[row][col].setNumberOfMinesInSurrounding(8);
+					bricks[row][col].breakBrick();
 				}
 			}
 		}
 	}
 
 	private void rippleUncover(int rowClicked,int colClicked) {
-		if(blocks[rowClicked][colClicked].hasMine()) {
+		if(bricks[rowClicked][colClicked].hasMine()) {
 			return;
 		}
-		blocks[rowClicked][colClicked].openBlock();
-		if(blocks[rowClicked][colClicked].getNumberOfMinesInSurrounding()!=0) {
+		bricks[rowClicked][colClicked].breakBrick();
+		if(bricks[rowClicked][colClicked].getNumberOfMinesInSurrounding()!=0) {
 			return;
 		}
 		for(int row=0;row<3;row++) {
 			for(int col=0;col<3;col++) {
-				if(blocks[rowClicked+row-1][colClicked+col-1].isCovered()&&rowClicked+row-1>0 &&colClicked+col-1>0
+				if(bricks[rowClicked+row-1][colClicked+col-1].isCovered()&&rowClicked+row-1>0 &&colClicked+col-1>0
 						&&rowClicked+row-1<numberOfRowsInMineField+1 && colClicked+col-1<numberOfColumnsInMineField+1) {
 					    rippleUncover(rowClicked+row-1,colClicked+col-1);
 				}

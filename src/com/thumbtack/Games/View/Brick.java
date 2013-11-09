@@ -1,9 +1,11 @@
-package com.thumbtack.Games;
+package com.thumbtack.Games.View;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.Button;
+import com.thumbtack.Games.Model.Block;
+import com.thumbtack.Games.R;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,29 +14,16 @@ import android.widget.Button;
  * Time: 12:54 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Block extends Button {
-	private boolean  isCovered;
-	private boolean isMined;
-	private boolean isClickable;
-	private int numberOfMinesInSurrounding;
+public class Brick extends Button {
+	Block block;
 
-	public Block(Context context) {
+	public Brick(Context context) {
 		super(context);
-	}
-
-	public Block(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-	}
-
-	public Block(Context context, AttributeSet attrs) {
-		super(context, attrs);
+		block=new Block();
 	}
 
 	public void initialize() {
-		isCovered=true;
-		isClickable=true;
-		isMined=false;
-		numberOfMinesInSurrounding=0;
+		block.initialize();
 		this.setBackgroundResource(R.drawable.square_blue);
 	}
 
@@ -61,16 +50,16 @@ public class Block extends Button {
 		}
 	}
 
-	public void openBlock() {
-		if(!isCovered) {
+	public void breakBrick() {
+		if(!block.isCovered()) {
 			return;
 		}
 		setBlockAsDisabled(false);
-		isCovered=false;
-		if(hasMine()) {
+		block.setIsCovered(false);
+		if(block.hasMine()) {
 			setMineIcon(false);
 		}else {
-			setNearbyMines(numberOfMinesInSurrounding);
+			setNearbyMines(block.getNumberOfMinesInSurrounding());
 		}
 
 	}
@@ -109,37 +98,29 @@ public class Block extends Button {
 		}
 	}
 
-	public void plantMine() {
-		isMined=true;
-	}
-
 	public void triggerMine() {
 		setMineIcon(true);
 		this.setTextColor(Color.RED);
 	}
 
-	public boolean isCovered() {
-		return isCovered;
+	public boolean hasMine() {
+		return block.hasMine();
 	}
 
-	public boolean hasMine() {
-		return isMined;
+	public boolean isCovered() {
+		return block.isCovered();
+	}
+
+	public void plantMine() {
+		block.setIsMined(true);
 	}
 
 	public void setNumberOfMinesInSurrounding(int number) {
-		numberOfMinesInSurrounding=number;
+		block.setNumberOfMinesInSurrounding(number);
 	}
 
 	public int getNumberOfMinesInSurrounding() {
-		return numberOfMinesInSurrounding;
-	}
-
-	public boolean isClickable() {
-		return isClickable;
-	}
-
-	public void setClickable(boolean clickable) {
-		isClickable=clickable;
+		return block.getNumberOfMinesInSurrounding();
 	}
 
 
