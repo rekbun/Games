@@ -27,15 +27,13 @@
     <list default="true" id="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" name="Default" comment="" />
     <ignored path="Games.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/res/values/strings.xml" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383295828047" ignored="false" />
     <file path="/Dummy.txt" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383295872443" ignored="false" />
     <file path="/main.xml" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383641743473" ignored="false" />
-    <file path="/MinesweeperGame.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383564507978" ignored="false" />
-    <file path="/Block.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383640070870" ignored="false" />
+    <file path="/MinesweeperGame.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1384000028016" ignored="false" />
+    <file path="/Block.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383999958330" ignored="false" />
     <file path="/fragment.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383639800474" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383561447506" ignored="false" />
-    <file path="$PROJECT_DIR$/gen/com/thumbtack/Games/R.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383999013264" ignored="false" />
-    <file path="/Brick.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1383999232770" ignored="false" />
+    <file path="/Brick.java" changelist="7dfb4312-cea6-4729-a7a8-6a0e19f88cea" time="1384156573282" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +48,22 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java" line="59" class="com.thumbtack.Games.View.Brick" package="com.thumbtack.Games.View">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -85,22 +99,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java" line="59" class="com.thumbtack.Games.View.Brick" package="com.thumbtack.Games.View">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -113,11 +111,17 @@
       <file leaf-file-name="MinesweeperGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/Controller/MinesweeperGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="41" selection-start="6306" selection-end="6306" vertical-scroll-proportion="0.0">
+            <state line="39" column="64" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#MinesweeperGame#0" expanded="true" />
+                <element signature="method#onCreate#0;class#MinesweeperGame#0" expanded="true" />
                 <element signature="method#createMineField#0;class#MinesweeperGame#0" expanded="true" />
                 <element signature="method#winGame#0;class#MinesweeperGame#0" expanded="true" />
                 <element signature="method#checkGameWin#0;class#MinesweeperGame#0" expanded="true" />
+                <element signature="method#finishGame#0;class#MinesweeperGame#0" expanded="true" />
+                <element signature="method#setMines#0;class#MinesweeperGame#0" expanded="true" />
+                <element signature="method#recursivelyBreakBricks#0;class#MinesweeperGame#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,22 +136,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Brick.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Brick.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="31" selection-start="2184" selection-end="2184" vertical-scroll-proportion="2.0149503">
+            <state line="7" column="26" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="method#Brick#0;class#Brick#0" expanded="true" />
+                <element signature="method#initialize#0;class#Brick#0" expanded="true" />
+                <element signature="method#setNearbyMines#0;class#Brick#0" expanded="true" />
+                <element signature="method#setMineIcon#0;class#Brick#0" expanded="true" />
                 <element signature="method#setBlockAsDisabled#0;class#Brick#0" expanded="true" />
-                <element signature="method#breakBrick#0;class#Brick#0" expanded="true" />
-                <element signature="method#updateNumber#0;class#Brick#0" expanded="true" />
-                <element signature="method#triggerMine#0;class#Brick#0" expanded="true" />
-                <element signature="method#hasMine#0;class#Brick#0" expanded="true" />
-                <element signature="method#isCovered#0;class#Brick#0" expanded="true" />
-                <element signature="method#plantMine#0;class#Brick#0" expanded="true" />
-                <element signature="method#setNumberOfMinesInSurrounding#0;class#Brick#0" expanded="true" />
-                <element signature="method#getNumberOfMinesInSurrounding#0;class#Brick#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="R.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gen/com/thumbtack/Games/R.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="21" selection-start="143" selection-end="143" vertical-scroll-proportion="0.11295681">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,11 +162,8 @@
       <file leaf-file-name="Block.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/Model/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="4" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;class#Block#0" expanded="true" />
-                <element signature="method#initialize#0;class#Block#0" expanded="true" />
-              </folding>
+            <state line="12" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +171,7 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="14" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-28.37037">
+            <state line="63" column="14" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,8 +197,9 @@
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/thumbtack/Games/Block.java" />
         <option value="$PROJECT_DIR$/src/com/thumbtack/Games/Brick.java" />
-        <option value="$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java" />
         <option value="$PROJECT_DIR$/src/com/thumbtack/Games/Model/Block.java" />
+        <option value="$PROJECT_DIR$/src/com/thumbtack/Games/Controller/MinesweeperGame.java" />
+        <option value="$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java" />
       </list>
     </option>
   </component>
@@ -232,6 +237,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,54 +274,6 @@
               <option name="myItemId" value="Games" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -340,18 +299,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="Games" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -568,7 +525,6 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2353255" sideWeight="0.67164177" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -591,6 +547,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.74307036" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2353255" sideWeight="0.67164177" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32669982" sideWeight="0.99946666" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -656,13 +613,55 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#initialize#0;class#Brick#0" expanded="true" />
+            <element signature="method#setNearbyMines#0;class#Brick#0" expanded="true" />
+            <element signature="method#setMineIcon#0;class#Brick#0" expanded="true" />
+            <element signature="method#setBlockAsDisabled#0;class#Brick#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/Model/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="14" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/Controller/MinesweeperGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="61" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#onCreate#0;class#MinesweeperGame#0" expanded="true" />
             <element signature="method#createMineField#0;class#MinesweeperGame#0" expanded="true" />
             <element signature="method#winGame#0;class#MinesweeperGame#0" expanded="true" />
             <element signature="method#checkGameWin#0;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#finishGame#0;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#setMines#0;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#recursivelyBreakBricks#0;class#MinesweeperGame#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -678,16 +677,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#Brick#0;class#Brick#0" expanded="true" />
+            <element signature="method#initialize#0;class#Brick#0" expanded="true" />
+            <element signature="method#setNearbyMines#0;class#Brick#0" expanded="true" />
+            <element signature="method#setMineIcon#0;class#Brick#0" expanded="true" />
             <element signature="method#setBlockAsDisabled#0;class#Brick#0" expanded="true" />
-            <element signature="method#breakBrick#0;class#Brick#0" expanded="true" />
-            <element signature="method#updateNumber#0;class#Brick#0" expanded="true" />
-            <element signature="method#triggerMine#0;class#Brick#0" expanded="true" />
-            <element signature="method#hasMine#0;class#Brick#0" expanded="true" />
-            <element signature="method#isCovered#0;class#Brick#0" expanded="true" />
-            <element signature="method#plantMine#0;class#Brick#0" expanded="true" />
-            <element signature="method#setNumberOfMinesInSurrounding#0;class#Brick#0" expanded="true" />
-            <element signature="method#getNumberOfMinesInSurrounding#0;class#Brick#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,47 +712,56 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="14" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-28.37037">
+        <state line="63" column="14" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/blue.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/Controller/MinesweeperGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="41" selection-start="6306" selection-end="6306" vertical-scroll-proportion="0.0">
+        <state line="39" column="64" selection-start="936" selection-end="936" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#onCreate#0;class#MinesweeperGame#0" expanded="true" />
             <element signature="method#createMineField#0;class#MinesweeperGame#0" expanded="true" />
             <element signature="method#winGame#0;class#MinesweeperGame#0" expanded="true" />
             <element signature="method#checkGameWin#0;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#finishGame#0;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#setMines#0;class#MinesweeperGame#0" expanded="true" />
+            <element signature="method#recursivelyBreakBricks#0;class#MinesweeperGame#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/Model/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="4" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#Block#0" expanded="true" />
-            <element signature="method#initialize#0;class#Block#0" expanded="true" />
-          </folding>
+        <state line="12" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thumbtack/Games/View/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="31" selection-start="2184" selection-end="2184" vertical-scroll-proportion="2.0149503">
+        <state line="7" column="26" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#Brick#0;class#Brick#0" expanded="true" />
+            <element signature="method#initialize#0;class#Brick#0" expanded="true" />
+            <element signature="method#setNearbyMines#0;class#Brick#0" expanded="true" />
+            <element signature="method#setMineIcon#0;class#Brick#0" expanded="true" />
             <element signature="method#setBlockAsDisabled#0;class#Brick#0" expanded="true" />
-            <element signature="method#breakBrick#0;class#Brick#0" expanded="true" />
-            <element signature="method#updateNumber#0;class#Brick#0" expanded="true" />
-            <element signature="method#triggerMine#0;class#Brick#0" expanded="true" />
-            <element signature="method#hasMine#0;class#Brick#0" expanded="true" />
-            <element signature="method#isCovered#0;class#Brick#0" expanded="true" />
-            <element signature="method#plantMine#0;class#Brick#0" expanded="true" />
-            <element signature="method#setNumberOfMinesInSurrounding#0;class#Brick#0" expanded="true" />
-            <element signature="method#getNumberOfMinesInSurrounding#0;class#Brick#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/com/thumbtack/Games/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="21" selection-start="143" selection-end="143" vertical-scroll-proportion="0.11295681">
+          <folding />
         </state>
       </provider>
     </entry>

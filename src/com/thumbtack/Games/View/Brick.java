@@ -10,7 +10,7 @@ import com.thumbtack.Games.R;
 /**
  * Created with IntelliJ IDEA.
  * User: rakeshkumar
- * Date: 11/3/13
+ * Date: 11/7/13
  * Time: 12:54 PM
  * To change this template use File | Settings | File Templates.
  */
@@ -24,18 +24,18 @@ public class Brick extends Button {
 
 	public void initialize() {
 		block.initialize();
-		this.setBackgroundResource(R.drawable.square_blue);
+		this.setBackgroundResource(R.drawable.blue);
 	}
 
 	private void setNearbyMines(int number) {
-		this.setBackgroundResource(R.drawable.square_grey);
+		this.setBackgroundResource(R.drawable.grey);
 		updateNumber(number);
 	}
 
 	public void setMineIcon(boolean enabled) {
 		this.setText("M");
 		if(!enabled) {
-			this.setBackgroundResource(R.drawable.square_grey);
+			this.setBackgroundResource(R.drawable.grey);
 			this.setTextColor(Color.RED);
 		}else {
 			this.setTextColor(Color.BLACK);
@@ -44,9 +44,9 @@ public class Brick extends Button {
 
 	public void setBlockAsDisabled(boolean enabled) {
 		if(!enabled) {
-			this.setBackgroundResource(R.drawable.square_grey);
+			this.setBackgroundResource(R.drawable.grey);
 		}else {
-			this.setBackgroundResource(R.drawable.square_blue);
+			this.setBackgroundResource(R.drawable.blue);
 		}
 	}
 

@@ -3,10 +3,13 @@ package com.thumbtack.Games.Model;
 /**
  * Created with IntelliJ IDEA.
  * User: rakeshkumar
- * Date: 11/9/13
- * Time: 5:11 PM
+ * Date: 11/7/13
+ * Time: 4:11 PM
  * To change this template use File | Settings | File Templates.
  */
+
+
+//this is the model class which can be persisted on permanent store.
 public class Block {
 	private boolean  isCovered;
 	private boolean isMined;

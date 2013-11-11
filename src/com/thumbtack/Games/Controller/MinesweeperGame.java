@@ -6,15 +6,15 @@ import android.os.Handler;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
-import com.thumbtack.Games.View.Brick;
 import com.thumbtack.Games.R;
+import com.thumbtack.Games.View.Brick;
 
 import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
  * User: rakeshkumar
- * Date: 11/1/13
+ * Date: 11/7/13
  * Time: 2:20 PM
  * To change this template use File | Settings | File Templates.
  */
@@ -120,7 +120,7 @@ public class MinesweeperGame extends Activity {
 							setMines(finalRow,finalCol);
 						}
 
-						rippleUncover(finalRow,finalCol);
+						recursivelyBreakBricks(finalRow, finalCol);
 
 						if(bricks[finalRow][finalCol].hasMine()) {
 							finishGame(finalRow,finalCol);
@@ -234,7 +234,7 @@ public class MinesweeperGame extends Activity {
 		}
 	}
 
-	private void rippleUncover(int rowClicked,int colClicked) {
+	private void recursivelyBreakBricks(int rowClicked, int colClicked) {
 		if(bricks[rowClicked][colClicked].hasMine()) {
 			return;
 		}
@@ -246,7 +246,7 @@ public class MinesweeperGame extends Activity {
 			for(int col=0;col<3;col++) {
 				if(bricks[rowClicked+row-1][colClicked+col-1].isCovered()&&rowClicked+row-1>0 &&colClicked+col-1>0
 						&&rowClicked+row-1<numberOfRowsInMineField+1 && colClicked+col-1<numberOfColumnsInMineField+1) {
-					    rippleUncover(rowClicked+row-1,colClicked+col-1);
+					    recursivelyBreakBricks(rowClicked + row - 1, colClicked + col - 1);
 				}
 			}
 		}
